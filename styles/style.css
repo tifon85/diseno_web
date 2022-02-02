@@ -62,6 +62,9 @@ footer {
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    /* degradado */
+    background-color: #fad0c4;
+    background-image: linear-gradient(315deg, #fad0c4 0%, #f1a7f1 74%);
 }
 
 .menuFlex ul {
@@ -79,12 +82,6 @@ footer {
     background-color: white;
     font-weight: bold;
     margin: 5%;
-}
-
-.navBackground ul li:hover {
-    background-color: coral;
-    color: white;
-    text-align: center;
 }
 
 /* FOOTER */
@@ -113,6 +110,58 @@ footer {
 .rrss li img{
     width: 5%;
 }
+
+.ayuda{
+    /* ANIMACIÓN */
+    animation-name: ayuda;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+
+@keyframes ayuda {
+    from {
+        transform: translateX(-200px);
+    }
+    to {
+        transform:translateX(0px);
+    }
+}
+
+.rrss{
+    /* ANIMACIÓN */
+    animation-name: rrss;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+
+@keyframes rrss {
+    from {
+        transform: translateX(200px);
+    }
+    to {
+        transform:translateX(0px);
+    }
+}
+
+.copyright {
+    /* ANIMACIÓN */
+    animation-name: copy;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+
+@keyframes copy {
+    from {
+        transform: translateX(200px);
+    }
+    to {
+        transform:translateX(0px);
+    }
+}
+
 	
 /* MAIN INDEX*/
 
@@ -251,7 +300,20 @@ h3 {
 
 /* TABLET */
 
-@media (min-width: 481px) {
+@media (min-width: 576px) {
+
+    /* MENU */
+
+    .navBackground {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        /* degradado */
+        background-color: #abe9cd;
+        background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+    }
 
     /* PARALLAX */
 
@@ -343,13 +405,13 @@ h3 {
         width: 5%;
     }
 
-    #copyright{
+    .copyright{
         position: absolute;
         left: 35%;
         margin-top: 8%;
     }
 
-    #copyright h4{
+    .copyright h4{
         text-align: center;
         font-family: 'Roboto Condensed', sans-serif;
         font-size: 120%;
@@ -389,6 +451,8 @@ h3 {
         justify-content: space-between;
         align-items: center;
         text-align: center;
+        /* degradado */
+        background-image: linear-gradient(to right, rgb(255, 255, 255) 20%,blue 100%);
     }
 
     .menuFlex ul {
@@ -399,6 +463,20 @@ h3 {
         position: absolute;
         left: 60%;
         bottom: 35%;
+        /* ANIMACIÓN */
+        animation-name: menu;
+        animation-iteration-count: 1;
+        animation-duration: 2s;
+        animation-delay: 0s;
+    }
+
+    @keyframes menu {
+        from {
+            transform: translateY(-200px);
+        }
+        to {
+            transform:translateY(0px);
+        }
     }
 
     .menuFlex ul li {
@@ -409,15 +487,17 @@ h3 {
         background-color: white;
         font-weight: bold;
         margin: 5%;
+        /* TRANSICIÓN */
+        transition: all;
     }
 
     .navBackground ul li:hover {
-        background-color: coral;
-        color: white;
-        text-align: right;
+        background-color: rgb(80, 255, 240);
+        color: rgb(199, 43, 160);
+        text-align: center;
     }
 
-    /* CONTACTO */
+    /*  PAGINA CONTACTO */
 
     .direccion {
         display: flex;
@@ -428,6 +508,19 @@ h3 {
         font-size: 50%;
         align-items: center;
         padding: 5%;
+    }
+
+    /* PAGINA SERVICIO */
+
+    .tiposServicios section {
+        justify-items: center;
+        border: solid;
+        /* TRANSICIÓN */
+        transition: border 2ms;
+    }
+
+    .tiposServicios section:hover {
+        border: rgb(255, 0, 0) solid;
     }
 
 }
