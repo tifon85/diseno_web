@@ -65,6 +65,8 @@ footer {
     /* degradado */
     background-color: #fad0c4;
     background-image: linear-gradient(315deg, #fad0c4 0%, #f1a7f1 74%);
+    z-index: 1;
+    height: 25vh;
 }
 
 .menuFlex ul {
@@ -276,12 +278,34 @@ h3 {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: center;
-    font-size: 50%;
+    font-size: 20%;
     align-items: center;
     padding: 5%;
-    border:solid;
+    border: solid;
+}
+
+.direccion article {
+    width: 30%;
+    height: auto;
+}
+
+/* iframe de contacto */
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    width: 70%;
+}
+.embed-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* PAGINA NOSOTROS */
@@ -310,9 +334,11 @@ h3 {
         justify-content: space-between;
         align-items: center;
         text-align: center;
+        height: 25vh;
         /* degradado */
         background-color: #abe9cd;
         background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+
     }
 
     /* PARALLAX */
@@ -323,10 +349,9 @@ h3 {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;          
-        padding: 50px 30px;
-        margin-bottom:50px;
         display: flex;
         flex-direction: column;
+        height: 75vh;
     }
 
     .parallax h2 {
@@ -451,6 +476,7 @@ h3 {
         justify-content: space-between;
         align-items: center;
         text-align: center;
+        height: 25vh;
         /* degradado */
         background-image: linear-gradient(to right, rgb(255, 255, 255) 20%,blue 100%);
     }
